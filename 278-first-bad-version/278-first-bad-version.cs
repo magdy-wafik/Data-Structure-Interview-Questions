@@ -4,15 +4,15 @@
 public class Solution : VersionControl {
     public int FirstBadVersion(int n) {
         
-        int start = 1;
-       while(start < n)
+        int startValue = 1;
+       while(startValue < n)
        {
-           int middleValue = start + (n- start)/2;
+           int middleValue = startValue + (n- startValue)/2;
             if(IsBadVersion(middleValue))
                 n = middleValue;
             else
-                start = middleValue + 1;
+                startValue = middleValue + 1;
         }
-            return start;
+            return startValue;
        }
     }
