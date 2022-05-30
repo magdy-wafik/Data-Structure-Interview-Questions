@@ -8,30 +8,24 @@ public class Solution : VersionControl {
             return n;
             
        int middleIndex = n/2;
-        
-       
-        
+                
         for(int i = 1 ; i< middleIndex ; i++)
         {
             if(IsBadVersion(i))
-            {
                return i; 
-            }
+            
         }
         
          if(IsBadVersion(middleIndex))
-         return middleIndex;
+            return middleIndex;
         
         for(int i = middleIndex+1 ; i <= n ; i++)
         {
             if(IsBadVersion(i))
-            {
                return i; 
-            }
-        }
+            
+        } 
         
         return -1;
-        
-        
     }
 }
